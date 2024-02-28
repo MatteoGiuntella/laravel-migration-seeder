@@ -14,6 +14,7 @@ class TrainsController extends Controller
         $trains = Trains::all();
         // OPPURE
         // $movies = Movie::all();
+        $trains = Trains::whereDate('departures', '2024-01-01');
 
         // resources/views/movies/index.blade.php
         return view('welcome', compact('trains'));
